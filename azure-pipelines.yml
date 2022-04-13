@@ -10,12 +10,8 @@ pool:
   name: Default
 
 steps:
-- task: checkmarx.checkmarx-ast-azure-plugin.cx-scan-task.Checkmarx AST@2
-  displayName: 'Checkmarx AST'
-  inputs:
-    CheckmarxService: AST
-    tenantName: 'cx_ps_apac_test_james_bostock'
 - task: Checkmarx AST@2
+  displayName: 'Checkmarx AST'
   inputs:
     CheckmarxService: 'AST'
     projectName: '$(Build.Repository.Name)'
