@@ -17,10 +17,9 @@ steps:
     projectName: '$(Build.Repository.Name)'
     branchName: '$(Build.SourceBranchName)'
     tenantName: 'cx_ps_apac_test_james_bostock'
-    additionalParams: --scan-types sast --sast-incremental
-#    additionalParams: '--report-format sarif'
-#- task: PublishBuildArtifacts@1
-#  displayName: 'Publish artifact: CodeAnalysisLogs'
-#  inputs:
-#    PathToPublish: 'cx_result.sarif'
-#    ArtifactName: CodeAnalysisLogs
+    additionalParams: '--scan-types sast --sast-incremental --report-format sarif'
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish artifact: CodeAnalysisLogs'
+  inputs:
+    PathToPublish: 'cx_result.sarif'
+    ArtifactName: CodeAnalysisLogs
