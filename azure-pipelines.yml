@@ -17,7 +17,7 @@ steps:
     projectName: '$(Build.Repository.Name)'
     branchName: '$(Build.SourceBranchName)'
     tenantName: 'cx_ps_apac_test_james_bostock'
-    additionalParams: '--scan-types sast --sast-incremental --report-format sarif'
+    additionalParams: '--scan-types sast --sast-incremental --report-format sarif --tags "feedback-Assignee:$(Build.RequestedFor)"'
 - task: PublishBuildArtifacts@1
   displayName: 'Publish artifact: CodeAnalysisLogs'
   inputs:
