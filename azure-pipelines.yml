@@ -17,7 +17,7 @@ steps:
     projectName: '$(Build.Repository.Name)'
     branchName: '$(Build.SourceBranchName)'
     tenantName: 'cx_ps_apac_test_james_bostock'
-    additionalParams: '--scan-types sast --sast-incremental --report-format pdf --report--pdf-email "James.Bostock@checkmarx.com"'
+    additionalParams: '--scan-types sast --sast-incremental --report-format pdf --report-pdf-email James.Bostock@checkmarx.com'
 #- task: PublishBuildArtifacts@1
 #  displayName: 'Publish artifact: CodeAnalysisLogs'
 #  inputs:
