@@ -13,7 +13,7 @@ steps:
 - task: Checkmarx AST@2
   displayName: 'Checkmarx AST'
   inputs:
-    CheckmarxService: 'AST'
+    CheckmarxService: 'CxOne (API Key)'
     projectName: '$(Build.Repository.Name)'
     branchName: '$(Build.SourceBranchName)'
     tenantName: 'cx_ps_apac_test_james_bostock'
