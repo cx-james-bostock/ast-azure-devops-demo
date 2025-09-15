@@ -2,6 +2,7 @@ import os
 import sys
 import xml.sax
 
+# Another random comment
 # Random comment.
 # Another random comment.
 # Trigger a scan
