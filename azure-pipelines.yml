@@ -18,7 +18,7 @@ steps:
     projectName: '$(Build.Repository.Name)'
     branchName: '$(Build.SourceBranchName)'
     tenantName: 'cx_ps_apac_test_james_bostock'
-    additionalParams: '--report-format sarif'
+    additionalParams: '--report-format sarif --scs-repo-url $(Build.Repository.Uri) --scs-repo-token $(System.AccessToken)'
 - task: PublishBuildArtifacts@1
   displayName: 'Publish artifact: CodeAnalysisLogs'
   inputs:
