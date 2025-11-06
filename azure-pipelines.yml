@@ -10,6 +10,9 @@ trigger:
 pool:
   name: Default
 
+variables:
+- group: GitHubAccess
+
 steps:
 - task: Checkmarx AST@3
   displayName: 'Checkmarx AST'
@@ -18,7 +21,7 @@ steps:
     projectName: '$(Build.Repository.Name)'
     branchName: '$(Build.SourceBranchName)'
     tenantName: 'cx_ps_apac_test_james_bostock'
-    additionalParams: '--report-format sarif'
+    additionalParams: '--report-format sarif --scs-repo-url $(Build.Repository.Uri) --scs-repo-token $(GitHubAccessToken)'
 - task: PublishBuildArtifacts@1
   displayName: 'Publish artifact: CodeAnalysisLogs'
   inputs:
