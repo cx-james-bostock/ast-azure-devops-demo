@@ -15,9 +15,9 @@ variables:
 
 steps:
 - task: Checkmarx AST@3
-  displayName: 'Checkmarx AST'
+  displayName: 'Checkmarx One'
   inputs:
-    CheckmarxService: 'AST'
+    CheckmarxService: 'Checkmarx One'
     projectName: '$(Build.Repository.Name)'
     branchName: '$(Build.SourceBranchName)'
     tenantName: 'cx_ps_apac_test_james_bostock'
