@@ -10,8 +10,8 @@ trigger:
 pool:
   name: Default
 
-variables:
-- group: GitHubAccess
+# variables:
+# - group: GitHubAccess
 
 steps:
 - task: Checkmarx AST@3
